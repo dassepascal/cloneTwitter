@@ -25687,6 +25687,13 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_2 = {
   "class": "py-12"
 };
+var _hoisted_3 = {
+  "class": "max-w-3xl mx-auto sm:px-6 lg:px-8"
+};
+var _hoisted_4 = {
+  "class": "text-sm text-gray-900 font-bold hover:text-blue-400",
+  href: "#"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_app_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("app-layout");
 
@@ -25697,9 +25704,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [_hoisted_1];
     }),
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.tweets), 1
-      /* TEXT */
-      )];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.tweets, function (tweet) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+          key: tweet.id,
+          "class": "flex items-center space-x-4 bg-white overflow-hidden rounded rounded-b-none border-b-2 border-gray-200 py-6 px-4"
+        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(tweet.user.name), 1
+        /* TEXT */
+        )])]);
+      }), 128
+      /* KEYED_FRAGMENT */
+      ))])])];
     }),
     _: 1
     /* STABLE */

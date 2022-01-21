@@ -7,7 +7,32 @@
     </template>
 
     <div class="py-12">
-      {{ tweets }}
+      <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
+        <div
+          v-for="tweet in tweets"
+          v-bind:key="tweet.id"
+          class="
+            flex
+            items-center
+            space-x-4
+            bg-white
+            overflow-hidden
+            rounded rounded-b-none
+            border-b-2 border-gray-200
+            py-6
+            px-4
+          "
+        >
+          <div>
+            <a
+              class="text-sm text-gray-900 font-bold hover:text-blue-400"
+              href="#"
+            >
+              {{ tweet.user.name }}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </app-layout>
 </template>
