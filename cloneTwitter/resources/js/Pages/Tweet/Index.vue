@@ -30,6 +30,9 @@
             >
               {{ tweet.user.name }}
             </a>
+            <span class="font-thin text-gray-400"
+              >· le {{ tweet.created_at }}</span
+            >
           </div>
         </div>
       </div>
