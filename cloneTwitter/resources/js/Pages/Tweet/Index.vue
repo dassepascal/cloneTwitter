@@ -34,6 +34,57 @@
               >· le {{ tweet.created_at }}</span
             >
           </div>
+          <div class="text-sm text-gray-400 font-thin">
+            {{ tweet.content }}
+          </div>
+
+          <inertia-link
+            v-if="!tweet.user.isFollowing"
+            as="button"
+            :href="`/follows/${tweet.user.id}`"
+            method="POST"
+            class="
+              bg-white
+              text-blue-500
+              cursor-pointer
+              px-5
+              py-2
+              hover:text-white
+              border border-blue-500
+              leading-tight
+              hover:bg-blue-500
+              rounded-full
+              font-extrabold
+              transition-all
+              duration-300
+            "
+            preserve-scroll
+            >Suivre</inertia-link
+          >
+          <inertia-link
+            v-else
+            as="button"
+            :href="`/unfollows/${tweet.user.id}`"
+            method="POST"
+            class="
+              bg-white
+              text-blue-500
+              cursor-pointer
+              px-5
+              py-2
+              flex-shrink-0
+              hover:text-white
+              border border-blue-500
+              leading-tight
+              hover:bg-blue-500
+              rounded-full
+              font-extrabold
+              transition-all
+              duration-300
+            "
+            preserve-scroll
+            >Suivre</inertia-link
+          >
         </div>
       </div>
     </div>
